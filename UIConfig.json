@@ -1,0 +1,112 @@
+{
+  "page": {
+    "label": "TRANSLATE.PAGE_TITLE"
+  },
+  "sections": [
+    {
+      "id": "watchdog_settings",
+      "element": "section",
+      "label": "TRANSLATE.SETTINGS",
+      "icon": "fa-shield",
+      "onSave": {
+        "type": "controller",
+        "endpoint": "system_controller/airplay_watchdog",
+        "method": "saveSettings"
+      },
+      "saveButton": {
+        "label": "TRANSLATE.SAVE",
+        "data": [
+          "watchdogEnabled",
+          "checkIntervalSeconds",
+          "automaticRecovery",
+          "mdnsCheckEnabled"
+        ]
+      },
+      "content": [
+        {
+          "id": "watchdogEnabled",
+          "element": "switch",
+          "type": "boolean",
+          "label": "TRANSLATE.WATCHDOG_ENABLED",
+          "doc": "TRANSLATE.WATCHDOG_ENABLED_DOC",
+          "value": true
+        },
+        {
+          "id": "checkIntervalSeconds",
+          "element": "select",
+          "label": "TRANSLATE.CHECK_INTERVAL",
+          "doc": "TRANSLATE.CHECK_INTERVAL_DOC",
+          "value": {
+            "value": 30,
+            "label": "30 seconds"
+          },
+          "options": [
+            {
+              "value": 15,
+              "label": "15 seconds"
+            },
+            {
+              "value": 30,
+              "label": "30 seconds"
+            },
+            {
+              "value": 60,
+              "label": "1 minute"
+            },
+            {
+              "value": 120,
+              "label": "2 minutes"
+            }
+          ]
+        },
+        {
+          "id": "automaticRecovery",
+          "element": "switch",
+          "type": "boolean",
+          "label": "TRANSLATE.AUTO_RECOVERY",
+          "doc": "TRANSLATE.AUTO_RECOVERY_DOC",
+          "value": true
+        },
+        {
+          "id": "mdnsCheckEnabled",
+          "element": "switch",
+          "type": "boolean",
+          "label": "TRANSLATE.MDNS_CHECK",
+          "doc": "TRANSLATE.MDNS_CHECK_DOC",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": "watchdog_status",
+      "element": "section",
+      "label": "TRANSLATE.STATUS",
+      "icon": "fa-info-circle",
+      "content": [
+        {
+          "id": "currentStatus",
+          "element": "text",
+          "label": "TRANSLATE.CURRENT_STATUS",
+          "doc": "Not checked yet"
+        },
+        {
+          "id": "restartHistory",
+          "element": "text",
+          "label": "TRANSLATE.RESTART_HISTORY",
+          "doc": "No restart attempts"
+        },
+        {
+          "id": "manualRestart",
+          "element": "button",
+          "label": "TRANSLATE.MANUAL_RESTART",
+          "doc": "TRANSLATE.MANUAL_RESTART_DOC",
+          "onClick": {
+            "type": "controller",
+            "endpoint": "system_controller/airplay_watchdog",
+            "method": "manualRestart"
+          }
+        }
+      ]
+    }
+  ]
+}
