@@ -47,7 +47,7 @@ command-router methods used by the watchdog.
 
 The watchdog treats clean stops as intentional for a grace period and never
 starts an idle on-demand receiver. It uses standard systemd properties available
-on current Volumio 3 images. If `avahi-browse` is unavailable, the optional mDNS
+on current Volumio 3 and 4 images. If `avahi-browse` is unavailable, the optional mDNS
 test is reported unavailable and is not used to trigger recovery.
 
 ## Install
