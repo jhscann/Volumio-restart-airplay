@@ -29,7 +29,8 @@ The repair restarts Shairport alone through Volumio; it does not bounce
 
 ## Volumio compatibility assumptions
 
-This release targets Volumio 3 on Buster and Bookworm with Node.js 14 or newer.
+This release targets Volumio 3 and Volumio 4 on Buster or Bookworm with
+Node.js 14 or newer. It has been packaged to accept Volumio 4.119.0.
 It follows the AirPlay lifecycle in the official `volumio3-backend` source as
 inspected on June 20, 2026 (backend commit
 `9938d7179e3b7c4e41f3e2d60c255985cff08fee`):
@@ -39,6 +40,10 @@ inspected on June 20, 2026 (backend commit
   `airplay_emulation` plugin.
 - `SHAIRPORT_SYNC_ON_DEMAND=true` permits an intentionally inactive receiver.
 - A normal AirPlay stop may use `USR2` followed by a receiver restart.
+
+Volumio 4's Bookworm plugin conventions use Node.js 20, which satisfies this
+plugin's Node.js requirement. The Volumio 4 backend retains the lifecycle and
+command-router methods used by the watchdog.
 
 The watchdog treats clean stops as intentional for a grace period and never
 starts an idle on-demand receiver. It uses standard systemd properties available
