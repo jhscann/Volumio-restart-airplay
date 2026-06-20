@@ -1,0 +1,18 @@
+{
+  "watchdogEnabled": {
+    "type": "boolean",
+    "value": true
+  },
+  "checkIntervalSeconds": {
+    "type": "number",
+    "value": 30
+  },
+  "automaticRecovery": {
+    "type": "boolean",
+    "value": true
+  },
+  "mdnsCheckEnabled": {
+    "type": "boolean",
+    "value": false
+  }
+}
