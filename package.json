@@ -1,0 +1,53 @@
+{
+  "name": "airplay_watchdog",
+  "version": "1.0.0",
+  "description": "Conservative watchdog and recovery for Volumio's AirPlay receiver",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/run.js",
+    "check": "node --check index.js && node --check lib/watchdog.js && node --check lib/volumio-adapter.js && node --check test/run.js",
+    "validate": "npm run check && npm test"
+  },
+  "author": "Volumio community",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhscann/Volumio-restart-airplay.git"
+  },
+  "homepage": "https://github.com/jhscann/Volumio-restart-airplay#readme",
+  "bugs": {
+    "url": "https://github.com/jhscann/Volumio-restart-airplay/issues"
+  },
+  "keywords": [
+    "volumio",
+    "airplay",
+    "shairport-sync",
+    "watchdog",
+    "avahi",
+    "mdns"
+  ],
+  "volumio_info": {
+    "prettyName": "AirPlay Watchdog",
+    "icon": "fa-shield",
+    "plugin_type": "system_controller",
+    "architectures": [
+      "amd64",
+      "armhf",
+      "i386"
+    ],
+    "os": [
+      "buster",
+      "bookworm"
+    ],
+    "details": "Monitors Volumio's built-in Shairport Sync receiver and performs bounded, playback-aware recovery.",
+    "changelog": "Initial release with service, process and optional mDNS health checks."
+  },
+  "engines": {
+    "node": ">=14.15.4",
+    "volumio": ">=3.0.0 <4.0.0"
+  },
+  "dependencies": {
+    "kew": "^0.7.0",
+    "v-conf": "^1.4.3"
+  }
+}
