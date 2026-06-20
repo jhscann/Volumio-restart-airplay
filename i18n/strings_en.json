@@ -1,0 +1,18 @@
+{
+  "PAGE_TITLE": "AirPlay Watchdog",
+  "SETTINGS": "Watchdog settings",
+  "SAVE": "Save",
+  "WATCHDOG_ENABLED": "Watchdog enabled",
+  "WATCHDOG_ENABLED_DOC": "Periodically inspect Volumio's built-in AirPlay receiver.",
+  "CHECK_INTERVAL": "Check interval",
+  "CHECK_INTERVAL_DOC": "A conservative interval reduces load and avoids reacting to normal short transitions.",
+  "AUTO_RECOVERY": "Automatic recovery enabled",
+  "AUTO_RECOVERY_DOC": "Allow bounded recovery after confirmed unexpected failures.",
+  "MDNS_CHECK": "Check AirPlay advertisement",
+  "MDNS_CHECK_DOC": "Optionally verify this player is advertised through Avahi/mDNS. Disabled by default.",
+  "STATUS": "Status and actions",
+  "CURRENT_STATUS": "Current status",
+  "RESTART_HISTORY": "Recent restart history",
+  "MANUAL_RESTART": "Restart AirPlay Receiver",
+  "MANUAL_RESTART_DOC": "Safely ask Volumio to regenerate the AirPlay configuration and restart Shairport Sync."
+}
