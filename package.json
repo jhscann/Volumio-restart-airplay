@@ -1,6 +1,6 @@
 {
   "name": "airplay_watchdog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Conservative watchdog and recovery for Volumio's AirPlay receiver",
   "main": "index.js",
   "scripts": {
@@ -40,11 +40,11 @@
       "bookworm"
     ],
     "details": "Monitors Volumio's built-in Shairport Sync receiver and performs bounded, playback-aware recovery.",
-    "changelog": "Initial release with service, process and optional mDNS health checks."
+    "changelog": "1.0.1: Declare compatibility with Volumio 4 while retaining Volumio 3 support."
   },
   "engines": {
     "node": ">=14.15.4",
-    "volumio": ">=3.0.0 <4.0.0"
+    "volumio": ">=3.0.0 <5.0.0"
   },
   "dependencies": {
     "kew": "^0.7.0",
